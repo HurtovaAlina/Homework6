@@ -6,24 +6,18 @@
     
 </head>
 <body>
-    <div id="test">First</div>
-    <img class="image" id="picture" src="dog.jpg">
+  <div id="test">First</div>
+  <img class="image" id="picture" src="dog.jpg">
 
-    <h2>Article header</h2>      
-      <div id="text">
-        <p>First paragraph</p>
-        <p>Second paragraph</p>
-        <p>Third paragraph</p>
-      </div>
+  <h2>Article header</h2>      
+  <div id="text">
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+  </div>
 	<p>Another text</p>
 
-  <ul id="list">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
+  <ul id="list"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul>
   
   <h1>I'am a big header!!!</h1>
   <div id="myDiv">
@@ -37,9 +31,10 @@
       <li>me</li>
       <li>horizontal!</li>
   </ul>
-  <span>Make me invisible, please!</span>
 
-      <script>
+<span>Make me invisible, please!</span>
+
+<script>
 //====== Task1======
   document.getElementById("test");
   document.getElementsByTagName("div");
@@ -62,6 +57,17 @@ console.log(ulElement[1].innerHTML);
 console.log(ulElement[3].innerHTML);
 console.log(ulElement[2].innerHTML);
 
+let firstElem = document.getElementById("list").firstChild.innerHTML;
+console.log(firstElem);
+let fifthElem = document.getElementById("list").lastChild.innerHTML;
+console.log(fifthElem);
+let secondElem = document.getElementById("list").firstChild.nextSibling.innerHTML;
+console.log(secondElem);
+let fourthElem = document.getElementById("list").lastChild.previousSibling.innerHTML;
+console.log(fourthElem);
+let thirdElem = document.getElementById("list").lastChild.previousSibling.previousSibling.innerHTML;
+console.log(thirdElem);
+
 //====== Task5======
 let hElem = document.querySelector('h1');
 hElem.style.fontSize = "20px";
@@ -71,20 +77,15 @@ let pElem1 = document.querySelector('#myDiv p');
 pElem1.style.fontWeight ='bold';
 
 let pElement = document.querySelectorAll('#myDiv p');
-let p2Element = pElement[1].innerHTML;
-p2Element.style.color ='red';
+pElement[1].style.color ='red';
+pElement[2].style.textDecoration = 'UnderLine';
+pElement[3].style.fontStyle = 'italic';
 
-let p3Element = pElement[2].innerHTML;
-pElem3.style.textDecoration = 'UnderLine';
-
-let p4Element = pElement[3].innerHTML;
-pElem4.style.fontStyle = 'italic';
+document.getElementById("myList").style.listStyle ="none"
+document.getElementById("myList").style.display ="flex";
 
 let spanElem = document.querySelector('span').hidden = true;
 
 </script> 
-
-    </script>
-
 </body>
 </html>  
