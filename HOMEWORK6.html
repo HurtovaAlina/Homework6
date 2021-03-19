@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOMEWORK6</title>
+    
+</head>
+<body>
+    <div id="test">First</div>
+    <img class="image" id="picture" src="dog.jpg">
+
+    <h2>Article header</h2>      
+      <div id="text">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+      </div>
+	<p>Another text</p>
+
+  <ul id="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+  
+  <h1>I'am a big header!!!</h1>
+  <div id="myDiv">
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+      <p>Third paragraph</p>
+      <p>Fourth paragraph</p>
+  </div>
+  <ul id="myList">
+      <li>Make</li>
+      <li>me</li>
+      <li>horizontal!</li>
+  </ul>
+  <span>Make me invisible, please!</span>
+
+      <script>
+//====== Task1======
+  document.getElementById("test");
+  document.getElementsByTagName("div");
+  document.getElementById("test").innerHTML = "Last";
+//====== Task2======
+  document.querySelector("img").src = "cat.jpg";
+  window.open(document.getElementsByTagName("img").src="cat.jpg");
+//====== Task3======
+let elements = document.querySelectorAll('#text p');
+let count =0;
+  for (let p of elements) {
+   console.log("Selector text  "+ count +": "+ p.innerHTML);
+   count++;
+  }
+//====== Task4======
+let ulElement = document.querySelectorAll('#list li');
+console.log(ulElement[0].innerHTML);
+console.log(ulElement[4].innerHTML);
+console.log(ulElement[1].innerHTML);
+console.log(ulElement[3].innerHTML);
+console.log(ulElement[2].innerHTML);
+
+//====== Task5======
+let hElem = document.querySelector('h1');
+hElem.style.fontSize = "20px";
+hElem.style.backgroundColor = "#4CAF50";
+
+let pElem1 = document.querySelector('#myDiv p');
+pElem1.style.fontWeight ='bold';
+
+let pElement = document.querySelectorAll('#myDiv p');
+let p2Element = pElement[1].innerHTML;
+p2Element.style.color ='red';
+
+let p3Element = pElement[2].innerHTML;
+pElem3.style.textDecoration = 'UnderLine';
+
+let p4Element = pElement[3].innerHTML;
+pElem4.style.fontStyle = 'italic';
+
+let spanElem = document.querySelector('span').hidden = true;
+
+</script> 
+
+    </script>
+
+</body>
+</html>  
